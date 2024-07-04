@@ -1,10 +1,10 @@
 # MediPredict
 This repository contains the implementation of a medical cost prediction model using linear regression. The goal of this project is to predict the medical expenses of individuals based on various demographic and lifestyle factors. Additionally, a user-friendly interface is provided to input personal information and obtain cost predictions along with potential cost-saving suggestions.
 
-Project Overview
+#Project Overview
 Predicting medical costs is a crucial task in the healthcare and insurance industries. Accurate predictions can help in planning, budgeting, and providing better financial advice to patients. This project leverages the Medical Cost Personal Datasets from Kaggle to build a linear regression model that predicts medical costs based on factors such as age, BMI, smoking status, number of children, and region.
 
-Dataset
+#Dataset
 The dataset used for this project is the Medical Cost Personal Datasets from Kaggle. It includes the following features:
 
 Age: Age of the individual
@@ -22,13 +22,13 @@ Cost-Saving Suggestions: Providing users with potential cost-saving alternatives
 Installation
 To run this project locally, follow these steps:
 
-Clone the repository:
+#Clone the repository:
 
 bash
 Copy code
 git clone https://github.com/yourusername/medical-cost-prediction.git
 cd medical-cost-prediction
-Install the required packages:
+#Install the required packages:
 
 bash
 Copy code
@@ -41,11 +41,11 @@ python app.py
 Usage
 Data Preparation:
 
-Clean and preprocess the dataset.
+#Clean and preprocess the dataset.
 Handle missing values, encode categorical variables, and scale numerical features.
 Model Training:
 
-Train the linear regression model using the cleaned dataset.
+#Train the linear regression model using the cleaned dataset.
 Evaluate model performance using metrics like Mean Squared Error (MSE) and R-squared.
 User Interface:
 
@@ -58,10 +58,10 @@ The web interface allows for easy and intuitive interaction with the model, maki
 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request or open an issue to discuss improvements or suggestions.
 
-License
+#License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Acknowledgements
+#Acknowledgements
 Special thanks to Kaggle for providing the dataset.
 Inspired by various online resources and communities dedicated to data science and machine learning.
 
