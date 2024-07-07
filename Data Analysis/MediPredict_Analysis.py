@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
 
 df = pd.read_csv("Insurance_csv/insurance.csv")
@@ -62,21 +64,76 @@ print(y_test.shape)
 '''Create an instance of linear regression and train the model'''
 
 LinearR = LinearRegression()
-
 LinearR.fit(X_train,y_train)
+
+svm = SVR()
+svm.fit(X_train,y_train)
+
+randomF= RandomForestRegressor()
+randomF.fit(X_train,y_train)
+
+gradientR = GradientBoostingRegressor()
+gradientR.fit(X_train,y_train)
+
+
+
 
 '''Predict the Y-pred for the target based on the independent variables(Features)'''
 
-Y_pred = LinearR.predict(X_test)
+Y_pred_linear = LinearR.predict(X_test)
+Y_pred_svm = svm.predict(X_test)
+Y_pred_random = randomF.predict(X_test)
+Y_pred_gradient = gradientR.predict(X_test)
 
-'''Evaluate the performance of the Model'''
 
-r2_score_value = r2_score(y_test,Y_pred)
-mean_absolute_error_value = mean_absolute_error(y_test,Y_pred)
-mean_squared_error_value = mean_squared_error(y_test,Y_pred)
-interger = LinearR.intercept_
-print("The R2 Score is: ", r2_score_value)
-print("The mean_absolute_error_value is: ", mean_absolute_error_value)
-print("The mean_squared_error_value is: ", mean_squared_error_value)
-print("The interger is: ", interger)
+Trained_df = pd.DataFrame({
+    'Actual': y_test,
+    'Y_pred_linear': Y_pred_linear,
+    'Y_pred_svm': Y_pred_svm,
+    'Y_pred_random': Y_pred_random,
+    'Y_pred_gradient': Y_pred_gradient
+})
+
+
+
+'''Plot the models'''
+plt.subplot(221)
+plt.plot(Trained_df['Actual'].iloc[0:11],label='Actual')
+plt.plot(Trained_df['Y_pred_linear'].iloc[0:11],label='Lr')
+plt.legend()
+
+plt.subplot(222)
+plt.plot(Trained_df['Actual'].iloc[0:11],label='Actual')
+plt.plot(Trained_df['Y_pred_svm'].iloc[0:11],label='svm')
+plt.legend()
+
+
+plt.subplot(223)
+plt.plot(Trained_df['Actual'].iloc[0:11],label='Actual')
+plt.plot(Trained_df['Y_pred_random'].iloc[0:11],label='rg')
+plt.legend()
+
+
+plt.subplot(224)
+plt.plot(Trained_df['Actual'].iloc[0:11],label='Actual')
+plt.plot(Trained_df['Y_pred_gradient'].iloc[0:11],label='gradient')
+plt.legend()
+plt.show()
+
+
+
+
+
+# '''Evaluate the performance of the Model'''
+
+# r2_score_value = r2_score(y_test,Y_pred)
+# mean_absolute_error_value = mean_absolute_error(y_test,Y_pred)
+# mean_squared_error_value = mean_squared_error(y_test,Y_pred)
+# interger = LinearR.intercept_
+
+
+# print("The R2 Score is: ", r2_score_value)
+# print("The mean_absolute_error_value is: ", mean_absolute_error_value)
+# print("The mean_squared_error_value is: ", mean_squared_error_value)
+# print("The interger is: ", interger)
 
