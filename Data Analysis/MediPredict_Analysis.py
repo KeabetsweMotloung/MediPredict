@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-
+from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
 
 df = pd.read_csv("Insurance_csv/insurance.csv")
 
@@ -70,4 +70,13 @@ LinearR.fit(X_train,y_train)
 Y_pred = LinearR.predict(X_test)
 
 '''Evaluate the performance of the Model'''
+
+r2_score_value = r2_score(y_test,Y_pred)
+mean_absolute_error_value = mean_absolute_error(y_test,Y_pred)
+mean_squared_error_value = mean_squared_error(y_test,Y_pred)
+interger = LinearR.intercept_
+print("The R2 Score is: ", r2_score_value)
+print("The mean_absolute_error_value is: ", mean_absolute_error_value)
+print("The mean_squared_error_value is: ", mean_squared_error_value)
+print("The interger is: ", interger)
 
