@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
 
 
 df = pd.read_csv("Insurance_csv/insurance.csv")
@@ -58,5 +59,15 @@ print('')
 print('y_test : ')
 print(y_test.shape)
 
+'''Create an instance of linear regression and train the model'''
 
+LinearR = LinearRegression()
+
+LinearR.fit(X_train,y_train)
+
+'''Predict the Y-pred for the target based on the independent variables(Features)'''
+
+Y_pred = LinearR.predict(X_test)
+
+'''Evaluate the performance of the Model'''
 
