@@ -124,16 +124,48 @@ plt.show()
 
 
 
-# '''Evaluate the performance of the Model'''
+'''Evaluate the performance of the Model'''
 
-# r2_score_value = r2_score(y_test,Y_pred)
-# mean_absolute_error_value = mean_absolute_error(y_test,Y_pred)
-# mean_squared_error_value = mean_squared_error(y_test,Y_pred)
+r2_score_LinearR = r2_score(y_test,Y_pred_linear)
+r2_score_svm = r2_score(y_test,Y_pred_svm)
+r2_score_randomG = r2_score(y_test,Y_pred_random)
+r2_score_gradient = r2_score(y_test,Y_pred_gradient)
+
+
+
+mean_absolute_error_LinearR = mean_absolute_error(y_test,Y_pred_linear)
+mean_absolute_error_svm = mean_absolute_error(y_test,Y_pred_svm)
+mean_absolute_error_randomG = mean_absolute_error(y_test,Y_pred_random)
+mean_absolute_error_gradient = mean_absolute_error(y_test,Y_pred_gradient)
+
+
+mean_squared_error_LinearR = mean_squared_error(y_test,Y_pred_linear)
+mean_squared_error_svm = mean_squared_error(y_test,Y_pred_svm)
+mean_squared_error_randomG = mean_squared_error(y_test,Y_pred_random)
+mean_squared_error_gradient = mean_squared_error(y_test,Y_pred_gradient)
 # interger = LinearR.intercept_
 
 
-# print("The R2 Score is: ", r2_score_value)
-# print("The mean_absolute_error_value is: ", mean_absolute_error_value)
-# print("The mean_squared_error_value is: ", mean_squared_error_value)
+print("The R2 Score for LinearR is : ", r2_score_LinearR)
+print("The R2 Score for svm is : ", r2_score_svm)
+print("The R2 Score for randomG is : ", r2_score_randomG)
+print("The R2 Score for gradientR is : ", r2_score_gradient)
+
+print()
+print()
+
+print("The mean_absolute_error_value for LinearR is: ", mean_absolute_error_LinearR)
+print("The mean_absolute_error_value for svm is: ", mean_absolute_error_svm)
+print("The mean_absolute_error_value for randomG is: ", mean_absolute_error_randomG)
+print("The mean_absolute_error_value for gradientR is: ", mean_absolute_error_gradient)
+
+
+print()
+print()
+
+print("The mean_squared_error_value for LinearR is: ", mean_squared_error_LinearR)
+print("The mean_squared_error_value for svm is: ", mean_squared_error_svm)
+print("The mean_squared_error_value for randomG is: ", mean_squared_error_randomG)
+print("The mean_squared_error_value for gradientR is: ", mean_squared_error_gradient)
 # print("The interger is: ", interger)
 
