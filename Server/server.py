@@ -6,9 +6,15 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-model_path = os.path.join(os.path.dirname(__file__),'..', 'Model', 'MediPredict_Analysis')
+model_path = os.path.join(os.path.dirname(__file__),'..', 'Model', 'Medical_model_gradientR.joblib')
 
 medical_model = joblib.load(model_path)
+
+
+@app.route('/')
+def LandingPage():
+    return "Welcome to the MediPredict"
+
 
 @app.route('/predict',methods=['POST'])
 def predict():
