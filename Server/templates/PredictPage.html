@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Server/templates/Server/static/PredictPage.css">
     <title>Medi Prediction</title>
 </head>
 <body>
+
+    <div class = "container">
+
+        <nav>
+            <div class = "nav_logo">MediPredict</div>
+            <div class="medi_predict_image"><img src="/Server/templates/assets/medi_predict_logo1.png" alt="Medi_predict_logo" width="128" height="128"></div>
+        </nav>
+
+        <div class="title"><h1>Personalized Medical Cost Estimator</h1></div>
+
+        <p class="intro-paragraph">
+            Welcome to MediPredict! Enter your details below to receive an accurate prediction of your medical expenses.
+            Our advanced algorithms take into account various personal factors to provide you with the best insights. 
+            Take control of your healthcare budget today!
+        </p>
+
+        <form action="#">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Age</span>
+                    <input type="number" placeholder="Enter your age" required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="details">BMI</span>
+                    <input type="number" placeholder="Enter your BMI" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Nu. of children</span>
+                    <input type="number" placeholder="Enter the nu. of children you have" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Smoking status</span>
+                    <input type="text" placeholder="Enter your smoking status" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Region</span>
+                    <input type="text" placeholder="Enter your region" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Sex</span>
+                    <select required>
+                        <option value="" disabled selected>Select your sex</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                </div>
+            
+
+               
+                <button class="send-results-button"><span></span>Get results</button>
+            </form>
+        </div>
     
-</body>
-</html>
+    </body>
+    </html>
+    
