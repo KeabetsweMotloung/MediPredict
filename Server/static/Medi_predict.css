@@ -30,21 +30,46 @@ body{
 
 }
 
-nav{
-    padding: 2rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* justify-content: space-between; */
-    gap: 1rem;
+
+nav {
+    width: 100%; 
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 20px;
+    background-color: #ffffff; 
+    border-bottom: 2px solid #ddd; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    margin: 0; 
 }
 
-.nav_logo{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    
+
+.nav-container {
+    display: flex; 
+    align-items: center; 
 }
+
+
+.nav_logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #009688;
+    margin-right: 20px; 
+}
+
+
+.medi_predict_image img {
+    max-width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+
 
 .header{
     padding: 0 1rem;
@@ -93,7 +118,7 @@ nav{
 
 .Get_started_button span {
     background: #009688;
-    height: 100%; /* Cover the entire button height */
+    height: 100%; 
     width: 0;
     border-radius: 25px;
     position: absolute;
