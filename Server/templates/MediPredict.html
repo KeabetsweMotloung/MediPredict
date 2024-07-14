@@ -3,44 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Server/static/Medi_predict.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Medi_predict.css') }}">
     <title>MediPredict Homepage</title>
 </head>
 <body>
-    <!-- <div class = 'container'>
+    <div class='container'>
         <nav>
-            <div class = "nav_logo">MediPredict</div>
-            <div class="medi_predict_image"><img src="/Server/templates/assets/medi_predict_logo1.png" alt="Medi_predict_logo" width="128" height="128"></div>
-        </nav> -->
-
-        <div class = 'container'>
-            <nav>
-                <div class = "nav_logo">MediPredict</div>
-                <div class="medi_predict_image"><img src="/Server/templates/assets/medi_predict_logo1.png" alt="Medi_predict_logo" width="128" height="128"></div>
-            </nav>
+            <div class="nav_logo">MediPredict</div>
+            <div class="medi_predict_image">
+                <img src="{{ url_for('static', filename='assets/medi_predict_logo1.png') }}" alt="Medi_predict_logo" width="128" height="128">
+            </div>
+        </nav>
 
         <header class="header">
-            <div class = "content">
+            <div class="content">
                 <h1><span>Get a quick </span> <br /> Medical Analysis</h1>
                 <p>
-                    <p>
-                        MediPredict is a powerful tool designed to help you estimate your medical costs with ease. 
-                        Using advanced machine learning algorithms, our platform analyzes various factors such as 
-                        age, sex, BMI, number of children, smoking status, and region to provide an accurate prediction 
-                        of your healthcare expenses. Whether you're planning for future medical costs or just curious 
-                        about how certain factors impact your expenses, MedPredict offers a convenient solution. 
-                        Enter your details and get instant predictions to better manage your healthcare budget.
-                    </p>
-                    <a href="/Server/templates/PredictPage.html" class="Get_started_button"><span></span>Get started</a>
-                        
-                    </button>
-                    
+                    MediPredict is a powerful tool designed to help you estimate your medical costs with ease. 
+                    Using advanced machine learning algorithms, our platform analyzes various factors such as 
+                    age, sex, BMI, number of children, smoking status, and region to provide an accurate prediction 
+                    of your healthcare expenses. Whether you're planning for future medical costs or just curious 
+                    about how certain factors impact your expenses, MediPredict offers a convenient solution. 
+                    Enter your details and get instant predictions to better manage your healthcare budget.
                 </p>
+                <a href="{{ url_for('predict_page') }}" class="Get_started_button"><span></span>Get started</a>
             </div>
-
         </header>
-
     </div>
-    
 </body>
 </html>

@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Server/templates/Server/static/PredictPage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='PredictPage.css') }}">
     <title>Medi Prediction</title>
 </head>
 <body>
 
-    <div class = "container">
-
+    <div class="container">
         <nav>
-            <div class = "nav_logo">MediPredict</div>
-            <div class="medi_predict_image"><img src="/Server/templates/assets/medi_predict_logo1.png" alt="Medi_predict_logo" width="128" height="128"></div>
+            <div class="nav_logo">MediPredict</div>
+            <div class="medi_predict_image"><img src="{{ url_for('static', filename='assets/medi_predict_logo1.png') }}" alt="Medi_predict_logo" width="128" height="128"></div>
         </nav>
 
         <div class="title"><h1>Personalized Medical Cost Estimator</h1></div>
@@ -23,55 +22,56 @@
             Take control of your healthcare budget today!
         </p>
 
-        <form action="#">
+        <form action="{{ url_for('predict') }}" method="POST">
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Age</span>
-                    <input type="number" placeholder="Enter your age" required>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required>
                 </div>
                 
                 <div class="input-box">
-                    <span class="details">BMI</span>
-                    <input type="number" placeholder="Enter your BMI" required>
+                    <label for="bmi">BMI:</label>
+                    <input type="number" id="bmi" name="bmi" placeholder="Enter your BMI" required>
                 </div>
+                
                 <div class="input-box">
-                    <span class="details">Nu. of children</span>
-                    <input type="number" placeholder="Enter the nu. of children you have" required>
+                    <label for="children">Number of children:</label>
+                    <input type="number" id="children" name="children" placeholder="Enter the number of children you have" required>
                 </div>
+                
                 <div class="input-box">
-                    <span class="details">Smoking status</span>
-                    <select required>
+                    <label for="smoker">Smoking status:</label>
+                    <select id="smoker" name="smoking_status" required>
                         <option value="" disabled selected>Select your status</option>
-                        <option value="yes">yes</option>
-                        <option value="no">no</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
                     </select>
                 </div>
+                
                 <div class="input-box">
-                    <span class="details">Region</span>
-                    <select required>
+                    <label for="region">Region:</label>
+                    <select id="region" name="region" required>
                         <option value="" disabled selected>Select your region</option>
-                        <option value="southwest">southwest</option>
-                        <option value="southeast">southeast</option>
-                        <option value="northwest">northwest</option>
-                        <option value="northeast">northeast</option>
+                        <option value="southwest">Southwest</option>
+                        <option value="southeast">Southeast</option>
+                        <option value="northwest">Northwest</option>
+                        <option value="northeast">Northeast</option>
                     </select>
                 </div>
+                
                 <div class="input-box">
-                    <span class="details">Sex</span>
-                    <select required>
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex" required>
                         <option value="" disabled selected>Select your sex</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select>
                 </div>
-                </div>
-            
+            </div>
+           
+            <button type="submit" class="send-results-button"><span></span>Get results</button>
+        </form>
+    </div>
 
-               
-                <button class="send-results-button"><span></span>Get results</button>
-            </form>
-        </div>
-    
-    </body>
-    </html>
-    
+</body>
+</html>
