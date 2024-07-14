@@ -1,107 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-:root{
+:root {
     --primary-color: #28bf96;
     --primary-color-dark: #209677;
     --text-dark: #111827;
     --text-light: #6b7280;
     --white: #ffffff;
-
-
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto", sans-serif';
+    font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 10px;
-
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: auto;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
-
-
 }
 
-nav{
+nav {
     padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* justify-content: space-between; */
     gap: 1rem;
 }
 
-.nav_logo{
+.nav_logo {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
-    
 }
-.title .h1{
+
+.title h1 {
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 400;
-    color: var(--text-dark)
+    color: var(--text-dark);
 }
 
-.intro-paragraph{
+.intro-paragraph {
     margin-bottom: 2rem;
     color: var(--text-light);
     line-height: 1.75rem;
 }
 
-
-.container .title{
+.container .title {
     font-size: 25px;
-    font-weight:500 ;
+    font-weight: 500;
     position: relative;
-
 }
-.container .title::before{
+
+.container .title::before {
     content: '';
     left: 0;
     bottom: 0;
-
     position: absolute;
     height: 3px;
     width: 30px;
 }
 
-.container form .user-details{
+.container form .user-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 0 12px 0;
 }
 
-form .user-details .input-box{
+form .user-details .input-box {
     margin-bottom: 15px;
     width: calc(100% /2 - 20px);
 }
 
-.user-details .input-box .details{
+.user-details .input-box .details {
     font-weight: 500;
     display: block;
     margin-bottom: 5px;
 }
 
-.user-details .input-box input{
+.user-details .input-box input,
+.user-details .input-box select {
     height: 45px;
     width: 100%;
     outline: none;
@@ -111,46 +102,16 @@ form .user-details .input-box{
     font-size: 16px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
+    appearance: none;
+    background: #fff;
+    color: var(--text-dark);
 }
-  
 
 .user-details .input-box input:focus,
-.user-details .input-box input:valid{
+.user-details .input-box input:valid,
+.user-details .input-box select:focus,
+.user-details .input-box select:valid {
     border-color: #009688;
-}
-
-form .gender-details .gender-title{
-    font-size: 20px;
-    font-weight: 500;
-
-}
-form .gender-details .category{
-    display: flex;
-    width: 80%;
-    margin: 14px 0;
-    justify-content: space-between;
-}
-
-.gender-details .category label{
-    display: flex;
-    align-items: center;
-}
-
-.gender-details .category .dot-one{
-    height: 18px;
-    width: 18px;
-    background: #d9d9d9;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 5px solid transparent;
-}
-
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 .send-results-button {
