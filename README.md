@@ -26,7 +26,7 @@ To run this project locally, follow these steps:
 
 bash
 Copy code
-git clone https://github.com/yourusername/medical-cost-prediction.git
+git clone https://github.com/KeabetsweMotloung/MediPredict.git
 cd medical-cost-prediction
 #Install the required packages:
 
