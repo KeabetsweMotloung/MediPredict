@@ -27,8 +27,13 @@ To run this project locally, follow these steps:
 bash
 Copy code
 git clone https://github.com/KeabetsweMotloung/MediPredict.git
-cd medical-cost-prediction
+cd MediPredict
 #Install the required packages:
+Flask==2.0.3
+pandas==1.3.5
+numpy==1.21.5
+scikit-learn==1.0.2
+joblib==1.1.0
 
 bash
 Copy code
