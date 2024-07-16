@@ -1,5 +1,5 @@
 # MediPredict
-This repository contains the implementation of a medical cost prediction model using linear regression. The goal of this project is to predict the medical expenses of individuals based on various demographic and lifestyle factors. Additionally, a user-friendly interface is provided to input personal information and obtain cost predictions along with potential cost-saving suggestions.
+This repository contains the implementation of a medical cost prediction model using Gradient Boosting regressor. The goal of this project is to predict the medical expenses of individuals based on various demographic and lifestyle factors. Additionally, a user-friendly interface is provided to input personal information and obtain cost predictions along with potential cost-saving suggestions.
 
 ## Project Overview
 Predicting medical costs is a crucial task in the healthcare and insurance industries. Accurate predictions can help in planning, budgeting, and providing better financial advice to patients. This project leverages the Medical Cost Personal Datasets from Kaggle to build a linear regression model that predicts medical costs based on factors such as age, BMI, smoking status, number of children, and region.
