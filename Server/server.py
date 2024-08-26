@@ -8,6 +8,7 @@ app = Flask(__name__)
 model_path = os.path.join(os.path.dirname(__file__), '..', 'Model', 'Medical_model_gradientR.joblib')
 
 medical_model = joblib.load(model_path)
+# start using python3 server.py
 
 @app.route('/')
 def LandingPage():
