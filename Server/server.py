@@ -38,6 +38,8 @@ def predict():
         # Make prediction using the loaded model
         predicted_cost = medical_model.predict(client_data)[0]
 
+        predicted_cost = round(predicted_cost,2)
+
         # Return the prediction as a new template
         return render_template('PredictionResult.html', predicted_cost=predicted_cost)
     

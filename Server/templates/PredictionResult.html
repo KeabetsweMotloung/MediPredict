@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='Prediction_results.css') }}">
-    <title>Prediction results</title>
+    <title>Prediction Results</title>
 </head>
 <body>
     <div class="container">
-        <h1>Prediction Result</h1>
-        <p>Your estimated medical cost is: ${{ predicted_cost }}</p>
-        <a href="/">Go back to Home</a>
+        <nav>
+            <div class="nav-container">
+                <div class="nav_logo">MediPredict</div>
+                <div class="medi_predict_image">
+                    <img src="{{ url_for('static', filename='assets/medi_predict_logo1.png') }}" alt="Medi_predict_logo" width="128" height="128">
+                </div>
+            </div>
+        </nav>
+
+        <div class="title">
+            <h1>Personalized Medical Cost Estimator</h1>
+        </div>
+
+        <p class="intro-paragraph">
+            Our cutting-edge algorithms evaluate a range of personal factors to deliver precise insights into your healthcare costs.
+            Empower yourself with the knowledge to better manage your healthcare budget today!
+        </p>
+
+        <div class="results-container">
+            <h1>Prediction Result</h1>
+            <p>Based on your demographic data, the expected amount you can pay for medical expenses is: ${{ predicted_cost }}</p>
+            <a href="/">Go back to Home</a>
+        </div>
     </div>
 </body>
 </html>
