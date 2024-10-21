@@ -18,6 +18,8 @@
 
 body{
     font-family: "Roboto", sans-serif;
+    overflow-y: auto;
+    padding-top: 200px;
 }
 
 .container{
@@ -71,6 +73,7 @@ nav {
 
 
 
+
 .header{
     padding: 0 1rem;
     flex: 1;
@@ -78,6 +81,9 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
+    animation: gradient 10s ease infinite;
+    /* background: linear-gradient(135deg, rgba(40, 191, 150, 0.8), rgba(25, 172, 134, 0.8)); */
+
 
 }
 .content h1{
@@ -97,12 +103,56 @@ nav {
     color: var(--text-light);
     line-height: 1.75rem;
 }
+
+.additional-service {
+    background: linear-gradient(135deg, #28bf96, #1ca99c); /* Gradient background */
+    color: #ffffff; /* White text for contrast */
+    padding: 30px 20px; /* Generous padding */
+    border-radius: 8px; /* Rounded corners */
+    width: 280px; /* Fixed width for consistency */
+    text-align: center; /* Centered text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.additional-service:hover {
+    transform: translateY(-5px); /* Subtle hover lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.additional-service h2 {
+    margin-bottom: 10px; /* Space between title and paragraph */
+    font-size: 1.75rem; /* Larger title size */
+    font-weight: 600; /* Medium weight for title */
+}
+
+.additional-service p {
+    font-size: 1rem; /* Consistent paragraph size */
+    line-height: 1.5; /* Good readability */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+        padding: 20px; /* Less padding for smaller screens */
+    }
+    
+    .additional-service {
+        margin-top: 20px; /* Space above the additional service */
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+
+
 .Get_started_button{
     display: inline-block;
     width: 200px;
     padding: 15px 0;
     text-align: center;
-    margin: 20px 10px;
+    margin: 20px 10px 80px;
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid #009688;
@@ -134,4 +184,52 @@ nav {
 
 .Get_started_button:hover {
     color: white;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 20px 40px;
+}
+
+.card {
+    background: #f0f9f9;
+    padding: 40px 50px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.card-image {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #f0f9f9;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    width: 60%;
+    height: auto;
 }
